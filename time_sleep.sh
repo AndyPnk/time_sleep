@@ -3,7 +3,8 @@
 set -e
 
 # Пошук активного користувача GNOME
-USER_NAME=$(loginctl list-sessions --no-legend | awk '$3 != "" {print $3; exit}')
+SESSION=$(loginctl list-sessions --no-legend | awk '$4=="seat0"{print $1; exit}')
+USER_NAME=$(loginctl show-session "$SESSION" -p Name --value)
 
 if [ -z "$USER_NAME" ]; then
     echo "Не знайдено активного користувача."
