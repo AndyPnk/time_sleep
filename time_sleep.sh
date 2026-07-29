@@ -33,6 +33,12 @@ run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-battery-typ
 
 run_gsettings org.gnome.desktop.session idle-delay "uint32 900"
 
+echo "idle-delay: $(sudo -u "$USER_NAME" \
+env XDG_RUNTIME_DIR="$XDG_RUNTIME_DIR" \
+DBUS_SESSION_BUS_ADDRESS="$DBUS_SESSION_BUS_ADDRESS" \
+gsettings get org.gnome.desktop.session idle-delay)"
+
+
 run_gsettings org.gnome.desktop.screensaver lock-enabled true
 
 # Для Ubuntu
