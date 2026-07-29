@@ -30,7 +30,7 @@ run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type sus
 run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 900
 run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type suspend
 
-run_gsettings org.gnome.desktop.session idle-delay "uint32 900"
+run_gsettings org.gnome.desktop.session idle-delay "uint32 1200"
 
 run_gsettings org.gnome.desktop.screensaver lock-enabled true
 
