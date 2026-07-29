@@ -24,10 +24,10 @@ run_gsettings() {
 
 echo "Налаштовую політику енергозбереження для користувача $USER_NAME"
 
-run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 900
+run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 1200
 run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type suspend
 
-run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 900
+run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 1200
 run_gsettings org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type suspend
 
 run_gsettings org.gnome.desktop.session idle-delay "uint32 1200"
